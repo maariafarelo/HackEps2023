@@ -2,12 +2,16 @@ from flask import Flask, request, jsonify
 from gpt_utils import *
 from asana_utils import *
 from db import db
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
+
+app = Flask(__name__)
+CORS(app)
 
 @app.route('/feedback', methods=['GET'])
 def get_feedback():

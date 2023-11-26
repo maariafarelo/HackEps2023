@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #1565C0, #0D47A1);
+  color: #fff;
+}
+
+
+
+.mainPage {
+  text-align: center;
+  max-width: 400px; /* Adjust the max-width as needed */
+  margin: auto;
+}
+
+.submitfeedback h1 {
+  font-size: 48px;
+}
+
+.whoareyou h3,
+.producte h3,
+.proposal h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.input1 input,
+.input2 input,
+.input3 input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark text color */
+  border: 1px solid #cccccc; /* Border color */
+  border-radius: 4px; /* Optional: Rounded corners */
+  font-size: 16px;
+}
+
+.input1 input:focus,
+.input2 input:focus,
+.input3 input:focus {
+  outline: none;
+  border-color: #4caf50; /* Change the color as needed */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Change the color as needed */
+}
+
+.button button {
+  background-color: rgb(191, 191, 191);
+  color: #1565C0;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.button button:hover {
+  background-color: rgb(170, 170, 170);
+}
+
+
+.selectInput {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark text color */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Optional styles for better appearance */
+.selectInput {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.selectInput:focus {
+  outline: none;
+  border-color: #4caf50; /* Change the color as needed */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Change the color as needed */
+}
+
+/* Add these styles to your App.css file or create a new CSS file for modal styles */
+
+.toast-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  text-align: center;
+}
+
+.toast-modal p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.toast-modal button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toast-modal button:hover {
+  background-color: #0056b3;
+}
+
