@@ -63,6 +63,25 @@ body {
   background-color: rgb(170, 170, 170);
 }
 
+.admin-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.admin-button button {
+  background-color: #279fb1;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.admin-button button:hover {
+  background-color: #009bb3;
+}
+
 
 .selectInput {
   width: 100%;
