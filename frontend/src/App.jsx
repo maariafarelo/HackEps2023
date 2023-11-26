@@ -2,6 +2,8 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+
 
 function App() {
   const [showToast, setShowToast] = useState(false);
@@ -26,6 +28,11 @@ function App() {
 
   return (
     <div className='mainPage'>
+      <div className='admin-button'>
+        <Link to='/admin'>
+          <button>Admin Panel</button>
+        </Link>
+      </div>
       <div className='submitfeedback'>
         <h1>Submit your feedback!</h1>
       </div>
