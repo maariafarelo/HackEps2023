@@ -1,8 +1,11 @@
 from flask import Flask, request
 from gpt_utils import *
 from asana_utils import *
-app = Flask(__name__)
+from flask_cors import CORS
 
+
+app = Flask(__name__)
+CORS(app)
 
 @app.route('/feedback', methods=['GET'])
 def get_feedback():
