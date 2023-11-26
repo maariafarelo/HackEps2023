@@ -1,394 +1,127 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-
-/*=============== VARIABLES CSS ===============*/
-:root {
-  --header-height: 3.5rem;
-
-
-  --hue: 250;
-  --first-color: hsl(var(--hue), 100%, 75%);
-  --first-color-alt: hsl(var(--hue), 56%, 35%);
-  --title-color: hsl(228, 8%, 95%);
-  --text-color: hsl(228, 8%, 65%);
-  --body-color: hsl(251, 94%, 41%);
-  --container-color: hsl(228, 15%, 15%);
-
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Poppins", sans-serif;
-  --biggest-font-size: 2rem;
-  --bigger-font-size: 1.25rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
-
-  /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-semi-bold: 600;
-
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
-}
-
-/*========== Responsive typography ==========*/
-@media screen and (min-width: 1152px) {
-  :root {
-    --biggest-font-size: 4rem;
-    --bigger-font-size: 2rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-  }
-}
-
-/*=============== BASE ===============*/
-* {
-  box-sizing: border-box;
-  padding: 0;
+body {
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #1565C0, #0D47A1);
+  color: #fff;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
-input,
-textarea,
-button,
-body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-}
 
-body {
-  background-color: var(--body-color);
-  color: var(--text-color);
-}
-
-input,
-textarea,
-button {
-  outline: none;
-  border: none;
-}
-
-h1, h2, h3, h4 {
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img,
-svg {
-  max-width: 100%;
-  height: auto;
-}
-
-/*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.section {
-  padding-block: 5rem 2rem;
-}
-
-.section__title, 
-.section__subtitle {
+.mainPage {
   text-align: center;
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+  max-width: 400px; /* Adjust the max-width as needed */
+  margin: auto;
 }
 
-.section__title {
-  font-size: var(--h1-font-size);
-  margin-bottom: 1.5rem;
+.submitfeedback h1 {
+  font-size: 48px;
 }
 
-.section__subtitle {
-  font-size: var(--small-font-size);
-  margin-bottom: .25rem;
+.whoareyou h3,
+.producte h3,
+.proposal h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
-.section__subtitle span {
-  color: var(--first-color);
-}
-
-.main {
-  overflow: hidden; /* For animation ScrollReveal */
-}
-
-/*=============== HEADER & NAV ===============*/
-.header{
-  position: fixed;
+.input1 input,
+.input2 input,
+.input3 input {
   width: 100%;
-  background-color: var(--container-color);
-  top: 0;
-  left: 0;
-  z-index: var(--z-fixed)
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark text color */
+  border: 1px solid #cccccc; /* Border color */
+  border-radius: 4px; /* Optional: Rounded corners */
+  font-size: 16px;
 }
 
-.nav{
-  height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center ;
-
+.input1 input:focus,
+.input2 input:focus,
+.input3 input:focus {
+  outline: none;
+  border-color: #4caf50; /* Change the color as needed */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Change the color as needed */
 }
 
-.nav__logo{
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-
+.button button {
+  background-color: rgb(191, 191, 191);
+  color: #1565C0;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
 }
 
-.nav__logo span{
-  color:var(--first-color);
+.button button:hover {
+  background-color: rgb(170, 170, 170);
 }
 
-.nav__toggle,
-.nav__close{
-  display: flex;
-  font-size: 1.25rem;
-  color: var(--title-color);
+
+.selectInput {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark text color */
+  border: 1px solid #ccc;
+  border-radius: 4px;
   cursor: pointer;
 }
-/* Navigation for mobile devices */
-@media screen and (max-width: 1023px){
-  .nav__menu{
-    position:fixed;
-    top: 0;
-    right: -100%;
-    background-color: hsla(0, 0%, 10%, .3);
-    width: 75%;
-    height: 100%;
-    padding: 4.5rem 0 0 3rem;
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px); /*internet*/
-    transition: right .4s ;
-  }
+
+/* Optional styles for better appearance */
+.selectInput {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-.nav__list{
-  display: flex;
-  flex-direction: column;
-  row-gap: 3rem;
+.selectInput:focus {
+  outline: none;
+  border-color: #4caf50; /* Change the color as needed */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Change the color as needed */
 }
 
-.nav__link{
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-  transition: color .4s;
-}
+/* Add these styles to your App.css file or create a new CSS file for modal styles */
 
-
-.nav__link:hoover{
-  color: var(--first-color);
-}
-
-.nav__close{
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-}
-/* Show menu */
-.show-menu{
-  right: 0;
-}
-
-
-/* Add blur to header */
-
-
-/* Active link */
-
-
-/*=============== HOME ===============*/
-.home{
-  background-color: var(--container-color);
-}
-.home__container{
-  padding-top: 1rem;
-  row-gap: 2.5rem;
-}
-
-.home__content{
-  display: grid;
-  row-gap: 2rem;
-}
-
-.home__data{
+.toast-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
   text-align: center;
 }
 
-.home__subtitle,
-.home__education{
-  font-size: var(--bigger-font-size);
+.toast-modal p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
 }
 
-.home__subtitle span,
-.home__title {
-  color:var(--first-color)
+.toast-modal button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-.home__title{
-  font-size: var(--biggest-font-size);
-  font-weight: var(--font-semi-bold);
+.toast-modal button:hover {
+  background-color: #0056b3;
 }
 
-.home__description{
-  margin-block: 1rem 1.5rem;
-}
-
-.home__social{
-  display: flex;
-  justify-content:center ;
-  column-gap: 1.25rem;
-}
-
-.home__social-link{
-  display: flex;
-  background-color: var(--first-color-alt);
-  padding: .5rem;
-  color: var(--title-color);
-  font-size: 1.5rem;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  transition: transform .3s;
-}
-
-.home__social-link:hoover{
-  transform: translateY(-.25rem);
-}
-
-.home__image{
-  justify-self: center ;
-}
-
-.home__blob{
-  width:320px;
-  fill: var(--first-color);
-  filter: drop-shadow(0 12px 12px hsla(var(--hue),100%, 40%, .2))
-}
-
-
-.croqueta{
-  display: flex;
-  text-align: center;
-  display: contents;
- 
-
-  
-}
-
-.submitfeedback{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  width: 42.5rem;
-  height: 6.1875rem;
-  mix-blend-mode: screen;
-  backdrop-filter: blur(2px);
-}
-
-.whoareyou {
-  width: 42.5rem;
-  height: 6.1875rem;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 3rem;
-}
-.producte {
-  width: 42.5rem;
-  height: 6.1875rem;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
-  padding-left: 3rem;
-}
-.proposal {
-  width: 42.5rem;
-  height: 6.1875rem;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
-  padding-left: 3rem;
-}
-
-
-
-.button{
-  display: flex;
-  width: 78.375rem;
-  height: 6rem;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  color: blue;
-
-}
-
-/*input 1*/
-.input2 {
-  border: 2px solid transparent;
-  width: 50rem;
-  height: 10rem;
-  padding-left: 0.8em;
-  outline: none;
-  overflow: hidden;
-  background-color: #F3F3F3;
-  border-radius: 10px;
-  transition: all 0.5s;
-}
-
-.input2:hover,
-.input2:focus {
-  border: 2px solid #4A9DEC;
-  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
-  background-color: white;
-}
-
-/*input 2*/
-.input1 {
-  border: 2px solid transparent;
-  width: 30rem;
-  height: 10rem;
-  padding-left: 8em;
-  outline: none;
-  overflow: hidden;
-  background-color: #F3F3F3;
-  border-radius: 10px;
-  transition: all 0.5s;
-}
-
-
-.input1:hover,
-.input1:focus {
-  border: 2px solid #4A9DEC;
-  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
-  background-color: white;
-}
