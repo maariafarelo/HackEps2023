@@ -10,7 +10,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
 
-app = Flask(__name__)
 CORS(app)
 
 @app.route('/feedback', methods=['GET'])

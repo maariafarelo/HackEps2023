@@ -60,3 +60,19 @@ button:hover {
     justify-content: center;
     top: 20%;
 }
+
+.asana-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.asana-button a {
+  background-color: #279fb1;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+

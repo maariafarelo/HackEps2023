@@ -5,3 +5,4 @@ asana==3.2.2
 flask_sqlalchemy==3.1.1
 sqlalchemy==2.0.16
 psycopg2==2.9.9
+flask_cors==4.0.0
