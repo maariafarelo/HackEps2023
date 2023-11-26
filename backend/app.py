@@ -15,6 +15,7 @@ def post_feedback():
     client = req_body.get('client')
     product = req_body.get('product')
     feedback = req_body.get('feedback')
+    print(client, product, feedback)
     # Call get_gpt_response
     status = get_gpt_response(client, product, feedback)
     if status == 200:
