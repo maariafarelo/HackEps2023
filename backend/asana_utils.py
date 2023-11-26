@@ -18,8 +18,22 @@ class FeedbackType(Enum):
     Enhancement = "1206028573704640"
 
 
+class Product(Enum):
+    Intech3D = "1206028685905358"
+    Invelon = "1206028685905359"
+    Origen = "1206028685905360"
+    Innitia = "1206028685905361"
+    XRShop = "1206028685905362"
+    InGameVR = "1206028685905363"
+    PrintGo = "1206028685905364"
+    Urora = "1206028685905365"
+    Fabrex = "1206028685905366"
+
+
 def struct_to_send(feedback):
-    tags = [Priority[feedback.priority].value, FeedbackType[feedback.feedback_type].value]
+    product_tag = Product["PrintGo"].value if Product[feedback.product].value == "Print&Go" else Product[feedback.product].value
+    tags = [Priority[feedback.priority].value, FeedbackType[feedback.feedback_type].value,
+            product_tag]
     description = feedback.description + '\n' + feedback.user_story
     data = ({"name": feedback.title, "resource_subtype": "default_task", "completed": "false", "tags": tags,
              "workspace": "1144987988736463",
